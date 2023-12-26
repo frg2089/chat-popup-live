@@ -43,3 +43,9 @@
 - Qwik
 - UnoCSS
 - TypeScript
+
+## 使用方法
+
+对于 OBS Studio 用户：  
+浏览器源：https://frg2089.github.io/chat-popup-live/chatbox  
+自定义浏览器停靠窗口：https://frg2089.github.io/chat-popup-live/sender
