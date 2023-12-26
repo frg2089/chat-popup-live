@@ -65,19 +65,17 @@ export const App = component$(() => {
         style={{
           opacity: queue.current ? 0.5 : 0,
         }}
-        bg-white
-        transition-opacity
-        text-4xl>
-        <div w-1280px mx-auto>
-          <header class="pt-[0.5em]" h-1em>
-            <div font-bold>{queue.current?.message.name}</div>
+        class="bg-white transition-opacity text-4xl">
+        <div class="w-1280px mx-auto">
+          <header class="pt-[0.5em] h-1em">
+            <div class="font-bold">{queue.current?.message.name}</div>
           </header>
-          <section h-4em mx-2em class="pt-[0.5em]">
+          <section class="h-4em mx-2em pt-[0.5em]">
             {queue.current?.message.content}
           </section>
         </div>
         <footer>
-          <div class="control-panel flex" flex-row justify-center gap-4>
+          <div class="control-panel flex flex-row justify-center gap-4">
             <span>SAVE</span>
             <span>LOAD</span>
             <span>⭰</span>

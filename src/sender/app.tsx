@@ -74,11 +74,10 @@ export const App = component$(() => {
       </header>
       <section>
         <textarea
+          class="w-full box-border"
           name="content"
           autofocus
           autocapitalize="off"
-          w-full
-          box-border
           rows={10}
           bind:value={content}
           onKeyDown$={onKeyDown}
