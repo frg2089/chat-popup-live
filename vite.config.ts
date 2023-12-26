@@ -5,7 +5,7 @@ import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: 'chat-popup-live',
+  base: '/chat-popup-live/',
   build: {
     rollupOptions: {
       input: {
