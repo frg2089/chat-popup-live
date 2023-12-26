@@ -1,38 +1,45 @@
-# Qwik + Vite
+> [!important]
+> 比起这个项目，您可能更希望使用[Echo-Live](https://github.com/sheep-realms/Echo-Live)
 
-## Qwik in CSR mode
+与 Echo-Live 对比
 
-This starter is using a pure CSR (Client Side Rendering) mode. This means, that the application is fully bootstrapped in the browser. Most of Qwik innovations however take advantage of SSR (Server Side Rendering) mode.
+|                                | 本项目 | Echo-Live | 说明                                                                                                                                                                                 |
+| -----------------------------: | :----: | :-------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|                       稳定维护 |   ❌   |    ✔     | 经典的写完不管                                                                                                                                                                       |
+|                   可自定义配置 |   ❌   |    ✔     | 笑死，根本没做。只能通过修改源代码的形式来定制。                                                                                                                                     |
+|                 可从文件直接读 |   ❓   |    ✔     | 我没测试，所以不知道能不能读                                                                                                                                                         |
+|                       消息队列 |   ✔   |    ❌     | 同时发送多条消息能够按顺序显示                                                                                                                                                       |
+|                         可撤回 |   ❌   |    ✔     | Echo-Live可以通过直接发送消息的方式替换上一条消息                                                                                                                                    |
+|                     下一条提示 |   ✔   |    ❌     | 这个滚动条写了我好长时间，忙碌了一天的岛风师傅决定用别人现成的库                                                                                                                     |
+|                   无消息时隐藏 |   ✔   |    ❌     | 在没有新内容的情况下自动隐藏对话框                                                                                                                                                   |
+|                   保留消息历史 |   ✔   |    ❓     | 在不关闭工具窗口的情况下，Echo-Live能够保留一条历史（就是点击发送按钮不清空消息）；这个项目无限保留历史，可以用 <kbd>↑</kbd>/<kbd>↓</kbd> 键切换（这样或许会带来一些额外的内存占用） |
+| 按 <kbd>Enter</kbd> 键发送消息 |   ✔   |    ❌     | 按 <kbd>Shift</kbd> + <kbd>Enter</kbd> 换行                                                                                                                                          |
+|                   打字输入动效 |   ❌   |    ✔     | 文字输入动画                                                                                                                                                                         |
+|                    IME合成动效 |   ❌   |    ✔     | 输入法合成动画                                                                                                                                                                       |
+|                   打字输入音效 |   ❌   |    ✔     |
+|                 新对话入场音效 |   ❌   |    ✔     |
+|                       消息轮询 |   ❌   |    ✔     |
+|                       文字样式 |   ❌   |    ✔     |
+|                       特殊效果 |   ❌   |    ✔     |
+|                       停顿时间 |   ❌   |    ✔     |
+|                 自定义滚动速度 |   ❌   |    ✔     | 根本没做滚动                                                                                                                                                                         |
+|                     表单预填充 |   ❌   |    ✔     | 作为替代，我直接将角色名存本地存储里（没做上下切换的历史功能）                                                                                                                       |
 
-```ts
-export default defineConfig({
-  plugins: [
-    qwikVite({
-      csr: true,
-    }),
-  ],
-})
-```
+可能有未列出的 Echo-Live 的特性
 
-Use `npm create qwik@latest` to create a full production ready Qwik application, using SSR and [QwikCity](https://qwik.builder.io/docs/qwikcity/), our server-side metaframwork.
+但，我已经把我能想到的本项目里的所有特性都写出来了
 
-## Usage
+## 为什么不做这些功能？
 
-```bash
-$ npm install # or pnpm install or yarn install
-```
+我只针对输入体验做了优化，我认为这是最重要的事。
 
-Learn more on the [Qwik Website](https://qwik.builder.io) and join our community on our [Discord](https://qwik.builder.io/chat)
+## 开发环境
 
-## Available Scripts
+- Node.js 20
+- Yarn Berry
 
-In the project directory, you can run:
+## 技术栈
 
-### `npm run dev`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
-
-### `npm run build`
-
-Builds the app for production to the `dist` folder.<br>
+- Qwik
+- UnoCSS
+- TypeScript
