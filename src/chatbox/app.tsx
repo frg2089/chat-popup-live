@@ -63,7 +63,7 @@ export const App = component$(() => {
     <>
       <div
         style={{
-          opacity: queue.current ? 0.5 : 0,
+          opacity: queue.current ? 0.9 : 0,
         }}
         class="bg-white transition-opacity text-4xl">
         <div class="w-1280px mx-auto">
